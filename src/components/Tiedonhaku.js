@@ -8,7 +8,7 @@ import React, {useState, useEffect} from 'react';
 
 //harjoittelua
 
-function Tiedonhaku () {
+async function fetchUrl (kirjailija) {
 
     //tähän muuttuvat const (eli mitä haetaan)
     //ja alustus useState avulla
@@ -23,7 +23,7 @@ function Tiedonhaku () {
 
         try {
 
-            const response = await fetch('https://api.finna.fi/v1/search?lookfor=lehtola,leena')
+            const response = await fetch('https://api.finna.fi/v1/search?lookfor=' + kirjailija)
 
             //muutetaan sitten json muotoon
             //const json = await.response.json();

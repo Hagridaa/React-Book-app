@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useStyles,useState,fetchUrl} from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -14,7 +14,8 @@ import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import { Card } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+
+/*const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -23,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1),
     minWidth: 120,
   },
-}));
+}));*/
 
 export default function DialogSelect() {
   const classes = useStyles();
@@ -43,6 +44,14 @@ export default function DialogSelect() {
     setState({ ...state, open: false });
   };
 
+  const [kirjailija, setNimi] = useState ('');
+  
+  const haeKirjat = (e) => {
+    e.preventDefault();
+    fetchUrl(kirjailija);
+  }
+
+
   return (
     <Card style={ {textAlign: "center" , marginLeft:100, marginRight:100}}>
       <Button  onClick={handleClickOpen}>Hae uutta luettavaa tästä</Button>
@@ -52,17 +61,14 @@ export default function DialogSelect() {
         <DialogContent>
           <form className={classes.container}>
             <FormControl className={classes.formControl}>
-              <TextField name="nimi"label='kirjailijan nimi'>
-                  
-                  
-              </TextField>
+              <TextField name="nimi"label='kirjailijan nimi' Input type='text' onBlur={ (e) => setNimi (e.target.value)}></TextField>
           
             </FormControl>
           </form>
         </DialogContent>
 
         <DialogActions>
-          <Button onClick={handleClose} color="secondary">
+          <Button input type = 'submit' value='nimi' onClick={handleClose,(e) => haeKirjat(e)} color="secondary">
             Ok
           </Button>
           <Button onClick={handleClose} color="primary">

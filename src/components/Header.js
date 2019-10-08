@@ -10,6 +10,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 
@@ -55,10 +56,10 @@ const useStyles = makeStyles(theme => ({
           onClick={toggleDrawer(side, false)}
           onKeyDown={toggleDrawer(side, false)}
         >
+          {/*<Link to="/Home">Home</Link>,*/}
           <List>
-            {['Kirjalomake', 'Kirjalista', 'Henkilökunta', 'Tiedonhakulomake'].map((text, index) => (
+            {[<Link to="/">Home</Link>,<Link to="/Kirjalomake">Kirjalomake</Link>, <Link to="/KirjaLista">Kirjalista</Link>, <Link to="/Henkilokunta">Henkilökunta</Link>, <Link to="/Tiedonhakulomake">Tiedonhakulomake</Link>].map((text) => (
               <ListItem button key={text}>
-                {/*<ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>*/}
                 <ListItemText primary={text} />
               </ListItem>
             ))}

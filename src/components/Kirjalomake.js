@@ -4,6 +4,7 @@ import { Card, Paper, Typography } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import CreateIcon from '@material-ui/icons/Create';
 
+
 //drop down valikko, josta voi valita pitikö kirjasta vai ei?
 
 function Kirjalomake () {
@@ -32,9 +33,9 @@ function Kirjalomake () {
         }
 
     return (
-        <Paper style={ {margin:20, padding: 20}}>
+        <Paper style={ {margin:20, padding: 20, background:'pink'}}>
             <Typography>Tallenna lukemasi kirjat talteen tässä:</Typography>
-        <form>
+        <form> 
             <TextField  variant="outlined" label = 'Kirjan nimi' name="nimi" id='nimi' value={kirja.nimi} margin='normal' required full onChange={ (e) => muuta(e)}/> <br/>
 
             <TextField  variant="outlined" label ='Kirjailia' name="kirjailija" value={kirja.kirjailija}  margin='normal' onChange={ (e) => muuta(e)}/> <br/> <br/>

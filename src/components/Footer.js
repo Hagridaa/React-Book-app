@@ -63,13 +63,14 @@ export default function SimpleTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Kirjavinkki 1
+        Oletko jo lukenut Harry Pottereita?
+        Sujahda mukaan taikamaailmaan!
       </TabPanel>
       <TabPanel value={value} index={1}>
-      Kirjavinkki 2
+      Kaipaatko jännitystä ja rikoksia? Aarnio kirja tempaa mukaansa!
       </TabPanel>
       <TabPanel value={value} index={2}>
-      Kirjavinkki 3
+      Kaipaatko uusia reseptejä keittiöön? Katso Vegaanikeittokirjasta!
       </TabPanel>
     </div>
   );
