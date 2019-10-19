@@ -1,81 +1,62 @@
-import React,{useStyles,useState,fetchUrl} from 'react';
-
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import InputLabel from '@material-ui/core/InputLabel';
-import Input from '@material-ui/core/Input';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import TextField from '@material-ui/core/TextField';
-import { Card } from '@material-ui/core';
+// //const response = await fetch('https://api.finna.fi/v1/search?lookfor=' + kirjailija);
+// import React, {useState} from 'react';
 
 
-/*const useStyles = makeStyles(theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-}));*/
+// function hae () {
 
-export default function DialogSelect() {
-  const classes = useStyles();
-  const [state, setState] = React.useState({
-    open: false
-  });
+//   const [kirjailija, setValues] = useState({
+//     title: '',
+//     nimi: ''
+//   });
 
-  const handleChange = name => event => {
-    setState({ ...state, [name]: Number(event.target.value) });
-  };
-
-  const handleClickOpen = () => {
-    setState({ ...state, open: true });
-  };
-
-  const handleClose = () => {
-    setState({ ...state, open: false });
-  };
-
-  const [kirjailija, setNimi] = useState ('');
+//   const [viesti, setViesti] = useState('');
   
-  const haeKirjat = (e) => {
-    e.preventDefault();
-    fetchUrl(kirjailija);
-  }
+
+//   async function fetchUrl(kirjailija) {
+//     try {
+//       const response = await fetch('https://api.finna.fi/v1/search?lookfor=' + kirjailija);
+//       const json = await response.json();
+
+//       setValues({
+//         nimi: json.nimi,
+//         title: json.title
+//       });
+// setViesti(''); 
+// } catch(error) {
+//     setViesti('lisää kirjailijan nimi');
+//   }
+// }
 
 
-  return (
-    <Card style={ {textAlign: "center" , marginLeft:100, marginRight:100}}>
-      <Button  onClick={handleClickOpen}>Hae uutta luettavaa tästä</Button>
-      <Dialog disableBackdropClick disableEscapeKeyDown open={state.open} onClose={handleClose}>
-        <DialogTitle>Anna kirjailijan nimi</DialogTitle>
+// const HaeKirjailija = (e) => {
+//   e.preventDefault();
+//   FetchUrl(kirjailija);
+// }
 
-        <DialogContent>
-          <form className={classes.container}>
-            <FormControl className={classes.formControl}>
-              <TextField name="nimi"label='kirjailijan nimi' Input type='text' onBlur={ (e) => setNimi (e.target.value)}></TextField>
-          
-            </FormControl>
-          </form>
-        </DialogContent>
+// return (
+//   <div>
 
-        <DialogActions>
-          <Button input type = 'submit' value='nimi' onClick={handleClose,(e) => haeKirjat(e)} color="secondary">
-            Ok
-          </Button>
-          <Button onClick={handleClose} color="primary">
-          Peruuta
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </Card>
-  );
-}
+// <form>
+//           <label htmlFor='kirjailija'>kirjailija </label>
+//           <input type='text' size='15' name='nimi' onBlur={ (e) => setKirjailja(e.target.value) }/>
+//           &nbsp;<input type='submit' value='Hae' onClick={ (e) => HaeKirjailija(e) } />
+//       </form>
+
+//           kirjailija.nimi.lenght > 0 ?
+//            <div>
+//              <h3> {kirjailija.nimi}</h3>
+//              <p>
+//                {kirjailija.title}
+//              </p>
+
+//              <p>
+//                {viesti}
+//              </p>
+//            </div>
+
+//   </div>
+// );
+
+// }
+
+// export default Tiedonhakulomake;

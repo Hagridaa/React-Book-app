@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,9 +10,10 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-
+import { Link } from "react-router-dom";
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -56,13 +57,23 @@ const useStyles = makeStyles(theme => ({
           onClick={toggleDrawer(side, false)}
           onKeyDown={toggleDrawer(side, false)}
         >
-          {/*<Link to="/Home">Home</Link>,*/}
+          
           <List>
-            {[<Link to="/">Home</Link>,<Link to="/Kirjalomake">Kirjalomake</Link>, <Link to="/KirjaLista">Kirjalista</Link>, <Link to="/Henkilokunta">Henkilökunta</Link>, <Link to="/Tiedonhakulomake">Tiedonhakulomake</Link>].map((text) => (
-              <ListItem button key={text}>
-                <ListItemText primary={text} />
+              <ListItem>
+                <ListItemText><Link to="/">Home</Link> </ListItemText>
               </ListItem>
-            ))}
+              <ListItem>
+                <ListItemText><Link to="/Kirjalomake">Kirjalomake</Link></ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText><Link to="/KirjaLista">Kirjalista</Link></ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText><Link to="/Henkilokunta">Henkilökunta</Link></ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText><Link to="/Tiedonhakulomake">Tiedonhakulomake</Link></ListItemText>
+              </ListItem>
           </List>
           <Divider />
          

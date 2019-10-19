@@ -1,13 +1,24 @@
 import React, {useState} from 'react';
 import TextField from '@material-ui/core/TextField';
-import { Card, Paper, Typography } from '@material-ui/core';
+import { Paper, Typography, Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import CreateIcon from '@material-ui/icons/Create';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+    
+    paper: { 
+      textAlign:"center",
+    //   marginRight: 20,
+    },
+  }));
 
 
 //drop down valikko, josta voi valita pitikö kirjasta vai ei?
 
 function Kirjalomake () {
+
+    const classes = useStyles();
 
     const [kirja, setValues] = useState ({
 
@@ -33,10 +44,12 @@ function Kirjalomake () {
         }
 
     return (
-        <Paper style={ {margin:20, padding: 20, background:'pink'}}>
+        <Grid container justify = "center">
+        <Paper style={ {width: 500, height: 350,margin:20, padding: 20, background:'pink'}} className = {classes.paper}>
             <Typography>Tallenna lukemasi kirjat talteen tässä:</Typography>
         <form> 
-            <TextField  variant="outlined" label = 'Kirjan nimi' name="nimi" id='nimi' value={kirja.nimi} margin='normal' required full onChange={ (e) => muuta(e)}/> <br/>
+        
+            <TextField  variant="outlined" label = 'Kirjan nimi' name="nimi" id='nimi' value={kirja.nimi} margin='normal' required onChange={ (e) => muuta(e)}/> <br/>
 
             <TextField  variant="outlined" label ='Kirjailia' name="kirjailija" value={kirja.kirjailija}  margin='normal' onChange={ (e) => muuta(e)}/> <br/> <br/>
 
@@ -46,6 +59,7 @@ function Kirjalomake () {
            {/*<input type="submit" value="lisää" onClick={(e) => lisaa(e)}/>*/}
         </form>
         </Paper>
+        </Grid>
 
 
         
@@ -53,5 +67,3 @@ function Kirjalomake () {
 
 }
 export default Kirjalomake; 
-
-{/*style={ {marginLeft: 20, marginRight: 20, maxWidth: 200}}*/}

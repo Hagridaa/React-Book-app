@@ -1,6 +1,6 @@
 import { red } from '@material-ui/core/colors';
 import '../tyyli.css';
-import {blue,green,yellow} from '@material-ui/core/colors';
+import {green,yellow} from '@material-ui/core/colors';
 import {createMuiTheme, Paper } from '@material-ui/core';
 
 
@@ -15,7 +15,7 @@ const theme = createMuiTheme({
         
     },
     typography: {color:'primary',fontFamily: ['Big Shoulders Display','sans-serif']},
-    overrides: { },
+  
     });
 
     export default theme;
