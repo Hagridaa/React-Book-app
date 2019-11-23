@@ -3,8 +3,6 @@ import './App.css';
 import Kirjalomake from './components/Kirjalomake';
 import KirjaLista from './components/KirjaLista';
 import theme from './components/Theme';
-
-
 import {MuiThemeProvider} from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from './components/Header';
@@ -14,7 +12,6 @@ import Henkilokunta from './components/Henkilokunta'
 import './tyyli.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-//import Tiedonhaku from './components/Tiedonhaku';
 
 //LISTA OBJECTI korvataan 2 vaiheessa oikealla kannalla
 const kirjatlistassa = [
