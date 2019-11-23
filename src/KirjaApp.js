@@ -11,29 +11,30 @@ import Home from './components/Home';
 import Henkilokunta from './components/Henkilokunta'
 import './tyyli.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import HaeKirjat from './components/HaeKirjat';
 
 
 //LISTA OBJECTI korvataan 2 vaiheessa oikealla kannalla
-const kirjatlistassa = [
-    {
-        id: 1,
-        nimi: 'Sieni kirja',
-        kirjailija: 'Tove Ansa'
-    },
+//const kirjatlistassa = [
+   // {
+    //    id: 1,
+     //   nimi: 'Sieni kirja',
+     //   kirjailija: 'Tove Ansa'
+    //},
 
-    {
-        id: 2,
-        nimi: 'Lemmikit',
-        kirjailija: 'Hasse Piu'
-    }
-,
-    {
-        id: 3,
-        nimi: 'Lemmikit kesälomalla',
-        kirjailija: 'Hasse Piu'
-    }
+    //{
+      //  id: 2,
+      //  nimi: 'Lemmikit',
+      //  kirjailija: 'Hasse Piu'
+    //}
+//,
+   // {
+     //   id: 3,
+      //  nimi: 'Lemmikit kesälomalla',
+      //  kirjailija: 'Hasse Piu'
+    //}
 
-];
+///];
 
 
 function KirjaApp() {
@@ -65,7 +66,7 @@ return(
           </Route>
 
           <Route path="/KirjaLista">
-            <KirjaLista kirjat={kirjatlistassa} />
+            <HaeKirjat />
           </Route>
 
           <Route path="/Henkilokunta">
