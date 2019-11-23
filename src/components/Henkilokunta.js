@@ -7,6 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -21,6 +22,9 @@ const useStyles = makeStyles(theme => ({
 
 function Henkilokunta() {
     return(
+
+        <Grid container justify = "center">
+            
         <Card style={ {marginTop: 20, marginBottom: 20 }}>
         
         <h2 style={ {textAlign: "center"}}>KirjaApin henkilökunta esittäytyy</h2>
@@ -47,6 +51,7 @@ function Henkilokunta() {
             </Table>
         </Paper>
         </Card>
+        </Grid>
 );
 }
 
