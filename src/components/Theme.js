@@ -1,7 +1,7 @@
-import { red } from '@material-ui/core/colors';
+
 import '../tyyli.css';
-import {green,yellow} from '@material-ui/core/colors';
-import {createMuiTheme, Paper } from '@material-ui/core';
+import {green,yellow,red} from '@material-ui/core/colors';
+import {createMuiTheme} from '@material-ui/core';
 
 
 
