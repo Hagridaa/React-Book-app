@@ -2,13 +2,16 @@
 // import React, {useState} from 'react';
 
 
-// function hae () {
+// function Tiedonhakulomake () {
 
 //   const [kirjailija, setValues] = useState({
 //     title: '',
 //     nimi: ''
 //   });
 
+//   const[tulokset, setTulokset] = useState('');
+//  
+//
 //   const [viesti, setViesti] = useState('');
   
 
@@ -17,21 +20,30 @@
 //       const response = await fetch('https://api.finna.fi/v1/search?lookfor=' + kirjailija);
 //       const json = await response.json();
 
-//       setValues({
+//       setValues([]
 //         nimi: json.nimi,
 //         title: json.title
-//       });
+//       ]);
+
 // setViesti(''); 
 // } catch(error) {
 //     setViesti('lisää kirjailijan nimi');
 //   }
 // }
 
+//TÄHÄN OBJEKTITAULUKON LISTAUS mutta testaa ensin lisää Postmanin kanssa, koska ..
+
 
 // const HaeKirjailija = (e) => {
 //   e.preventDefault();
-//   FetchUrl(kirjailija);
+//   fetchUrl(kirjailija);
 // }
+// const setKirjailija = (e) => {
+//   setValues({
+//   ..kirjailija,
+ //   nimi: e.target.value
+//});
+//}
 
 // return (
 //   <div>
