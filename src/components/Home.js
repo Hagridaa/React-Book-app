@@ -11,7 +11,7 @@ function Home(){
 <Grid spacing={4} container justify="center">
 
 <Grid item xs={12}>
-    <Typography variant = 'h3' style={ {textAlign: "center"}}>Lukemasi ja kuuntelemasi kirjat talteen</Typography>
+    <Typography variant = 'h3' style={ {textAlign: "center"}}>Tallenna lukemasi ja kuuntelemasi kirjat talteen</Typography>
     </Grid>
                 
                                 <Grid item xm={6}>
@@ -25,7 +25,7 @@ function Home(){
 
                                 <Grid item xm={6}>
                                         <Card style={{maxWidth: 350, minWidth: 350}}>
-                                        <CardHeader title='Lukemisen iloa' align='center'/>
+                                        <CardHeader title='Sukella tarinoihin' align='center'/>
                                     <CardContent>
                                         <Typography variant='h6' align='center'>Ja saat myös vinkkejä uusiin lukuhetkiin! Mitä jos kokeilisit jotain ihan uutta?</Typography>
                                     </CardContent>

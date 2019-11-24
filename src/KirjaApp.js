@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Kirjalomake from './components/Kirjalomake';
-import KirjaLista from './components/KirjaLista';
 import theme from './components/Theme';
 import {MuiThemeProvider} from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +11,7 @@ import Henkilokunta from './components/Henkilokunta'
 import './tyyli.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HaeKirjat from './components/HaeKirjat';
+import KirjalomakeEdit from './components/KirjalomakeEdit';
 
 
 //LISTA OBJECTI korvataan 2 vaiheessa oikealla kannalla
@@ -71,6 +71,11 @@ return(
 
           <Route path="/Henkilokunta">
             <Henkilokunta/>
+          </Route>
+
+          
+          <Route path="/muokkaa/:id/:nimi/:kirjailija">
+            <KirjalomakeEdit/>
           </Route>
 
          {/*<Route path="/Tiedonhakulomake">

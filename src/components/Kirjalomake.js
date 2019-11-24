@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import CreateIcon from '@material-ui/icons/Create';
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios';
-
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 const useStyles = makeStyles(theme => ({
     
@@ -35,7 +35,7 @@ function Kirjalomake () {
         setValues({
             ...kirja, [e.target.name]: e.target.value
         });
-
+        setViesti('');
         }
 
         const lisaaKirja = (e) => {
@@ -57,7 +57,14 @@ function Kirjalomake () {
 
     return (
         <Grid container justify = "center">
-        <Paper style={ {width: 500, height: 350,margin:20, padding: 20, background:'pink'}} className = {classes.paper}>
+            <Paper style={ {width: 500, height: 350,margin:20, padding: 20, background:'white'}} className = {classes.paper}>
+             <Typography variant='h2'>Lukemasi kirjat talteen</Typography>
+             <Typography variant='h5' style={ {margin:40}} >Viereisellä lomakkeella voit tallentaa kaikki lukemasi kirjat muistiin ja näin voit palata niihin aina uudelleen.</Typography>
+             <ArrowForwardIcon fontSize="large" />
+             </Paper>
+           
+        <Paper style={ {width: 500, height: 350,margin:20, padding: 20, background:'white'}} className = {classes.paper}>
+            
             <Typography>Tallenna lukemasi kirjat talteen tässä:</Typography>
         <form> 
         
@@ -70,6 +77,7 @@ function Kirjalomake () {
             <Button variant='contained' color='primary' style={ {marginRight:20, marginLeft: 20} } onClick={ lisaaKirja }><CreateIcon /> Lisää</Button>
            {/*<input type="submit" value="lisää" onClick={(e) => lisaa(e)}/>*/}
         </form>
+<Typography>{ viesti}</Typography>
         </Paper>
         </Grid>
 
